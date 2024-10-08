@@ -16,6 +16,7 @@ class ColorManager {
   static const grayExtraLight = Color(0xffe0e0e0);
   static const grayLight = Color(0xffededed);
   static const grayLighter = Color(0xfff5f5f5);
+  static const surfaceGray = Color(0xfffdfdff);
 
   // Primary Colors
   static const primaryBlue = Color(0xff247cff);
