@@ -23,7 +23,7 @@ class OnboardingFooter extends StatelessWidget {
               style: TextStyles.font11grayExtraRegular,
             ),
             verticalSpace(30),
-            Container(
+            SizedBox(
               width: 311.w,
               height: 52.h,
               child: ElevatedButton(

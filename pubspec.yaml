@@ -55,7 +55,7 @@ dependencies:
   intl: ^0.19.0
   easy_localization: ^3.0.3
   # for splash screen
-  flutter_native_splash: ^2.3.5
+  flutter_native_splash: 
   # An SVG rendering and widget library for Flutter, which allows painting 
   flutter_svg: ^2.0.9
   # for adapting screen and font size.
@@ -69,6 +69,9 @@ dependencies:
   flutter_secure_storage: ^9.2.2
   # easy way to add shimmer effect
   shimmer: ^3.0.0
+  # for getting country flags
+  country_flags: ^1.0.0  # Check for the latest version
+  country_list_pick: ^1.0.1+6
 
 dev_dependencies:
   flutter_test:

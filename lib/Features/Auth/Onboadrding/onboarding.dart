@@ -15,7 +15,7 @@ class Onboarding extends StatelessWidget {
         body: SafeArea(
             child: Padding(
       padding: EdgeInsets.only(top: 30.h, bottom: 30.h),
-      child: CustomScrollView(
+      child: const CustomScrollView(
         slivers: [OnboardingHeader(), OnboardingBody(), OnboardingFooter()],
       ),
     )));

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_project/Core/Strings/strings.dart';
 import 'package:flutter_complete_project/Core/Theme/Color/colors.dart';
 import 'package:flutter_complete_project/Core/Theme/Styles/textStyles.dart';
-import 'package:flutter_complete_project/Core/Theme/font_weight_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
