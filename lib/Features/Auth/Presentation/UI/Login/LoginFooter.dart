@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_project/Core/Extensions/navigation.dart';
 import 'package:flutter_complete_project/Core/Helpers/spacing.dart';
+import 'package:flutter_complete_project/Core/Routing/routes.dart';
 import 'package:flutter_complete_project/Core/Theme/Styles/textStyles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -34,7 +37,7 @@ class LoginscreenFooter extends StatelessWidget {
                 ],
               ),
             ),
-            verticalSpace(41.h),
+            verticalSpace(30.h),
             RichText(
               text: TextSpan(
                   text: 'Already have an account?  ',
@@ -42,6 +45,10 @@ class LoginscreenFooter extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: 'Sign Up',
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          context.pushReplacementNamed(Routes.register);
+                        },
                       style: TextStyles.font11primaryBlue,
                     )
                   ]),
