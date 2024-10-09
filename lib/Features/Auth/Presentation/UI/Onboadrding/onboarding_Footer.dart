@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_project/Core/Extensions/navigation.dart';
 import 'package:flutter_complete_project/Core/Helpers/spacing.dart';
+import 'package:flutter_complete_project/Core/Routing/routes.dart';
 import 'package:flutter_complete_project/Core/Strings/strings.dart';
 import 'package:flutter_complete_project/Core/Theme/Color/colors.dart';
 import 'package:flutter_complete_project/Core/Theme/Styles/textStyles.dart';
@@ -31,7 +33,9 @@ class OnboardingFooter extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     backgroundColor: ColorManager.primaryBlue),
-                onPressed: () {},
+                onPressed: () {
+                  context.pushReplacementNamed(Routes.login);
+                },
                 child: Text('Get Started', style: TextStyles.font16BoldWhite),
               ),
             )

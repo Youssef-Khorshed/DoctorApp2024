@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_project/Features/Auth/Onboadrding/onboarding_Body.dart';
-import 'package:flutter_complete_project/Features/Auth/Onboadrding/onboarding_Footer.dart';
-import 'package:flutter_complete_project/Features/Auth/Onboadrding/onboarding_Header.dart';
+import 'package:flutter_complete_project/Features/Auth/Presentation/UI/Onboadrding/onboarding_Body.dart';
+import 'package:flutter_complete_project/Features/Auth/Presentation/UI/Onboadrding/onboarding_Footer.dart';
+import 'package:flutter_complete_project/Features/Auth/Presentation/UI/Onboadrding/onboarding_Header.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Onboarding extends StatelessWidget {
