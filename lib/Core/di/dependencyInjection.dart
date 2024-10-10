@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_complete_project/Core/Helpers/dio_factory.dart';
 import 'package:flutter_complete_project/Features/Auth/Data/DataSource/remote.dart';
 import 'package:flutter_complete_project/Features/Auth/Data/RepoImplementation/repoimp.dart';
@@ -10,7 +9,6 @@ import 'package:get_it/get_it.dart';
 final getit = GetIt.instance;
 
 Future<void> getInit() async {
-  WidgetsFlutterBinding.ensureInitialized();
   // dio
   Dio dio = DioFactory.getDio();
 
