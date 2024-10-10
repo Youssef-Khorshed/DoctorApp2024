@@ -46,8 +46,6 @@ class _SignUpscreenBodyState extends State<SignUpscreenBody> {
         hasMinLength = AppRegex.hasMinLength(passcontroller.text);
       });
     });
-
-    print(hasLowerCase);
   }
 
   @override

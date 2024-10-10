@@ -10,7 +10,6 @@ import 'package:flutter_complete_project/Core/Validation/customvalidation.dart';
 import 'package:flutter_complete_project/Core/Widgets/app_text_button.dart';
 import 'package:flutter_complete_project/Core/Widgets/app_text_form_field.dart';
 import 'package:flutter_complete_project/Features/Auth/Presentation/Logic/LoginCubti/login_cubit_cubit.dart';
-import 'package:flutter_complete_project/Features/Auth/Presentation/Logic/RegisterCubit/register_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
