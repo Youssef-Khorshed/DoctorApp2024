@@ -4,11 +4,11 @@ default_platform(:android)
 platform :android do  # to select paltform ex: (android)
   desc "Runs all the tests" # any name you want that will not appear in your app
   lane :test do # lane name
-    # clean code 
-    sh "flutter clean"
-    # build apk ensuring flexibility of using all icon width risk of loss while building apk
-    sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
-    # build_android_app is a built-in fastlane action.
+      # clean code 
+      sh "flutter clean"
+      # build apk ensuring flexibility of using all icon width risk of loss while building apk
+      sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
+      # build_android_app is a built-in fastlane action.
      
       firebase_app_distribution(
       app: "1:1061520891897:android:fd2d33a1e24c49d7c5e728",
