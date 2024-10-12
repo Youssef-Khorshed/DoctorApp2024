@@ -16,7 +16,7 @@ platform :android do  # to select paltform ex: (android)
       #android_artifact_type	:'APK',
       android_artifact_path: "../build/app/outputs/apk/production/release/app-production-release.apk", ## ensurea add ../ to path to ignore rest of path from root
       release_notes: "Lots of amazing new features to test out!",
-      firebase_cli_token:ENV["FB_CLI_TOKEN"] "1//09W6WFFiX9nURCgYIARAAGAkSNwF-L9IrduHAQ1Vf47FuqiG_9sRueUyHFDXah-ZYG4vhCB13iV6OTSrxUbbBA-Fo5A1Od7Czvhg",
+      firebase_cli_token:ENV["FB_CLI_TOKEN"],
       )
   end
 
