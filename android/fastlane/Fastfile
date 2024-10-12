@@ -1,10 +1,23 @@
 default_platform(:android)
 
 
-platform :android do
-  desc "Runs all the tests"
-  lane :test do
-    gradle(task: "test")
+platform :android do  # to select paltform ex: (android)
+  desc "Runs all the tests" # any name you want that will not appear in your app
+  lane :test do # lane name
+    # clean code 
+    sh "flutter clean"
+    # build apk ensuring flexibility of using all icon width risk of loss while building apk
+    sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
+    # build_android_app is a built-in fastlane action.
+     
+      firebase_app_distribution(
+      app: "1:1061520891897:android:fd2d33a1e24c49d7c5e728",
+      testers: "khorshedkhorshed@gmail.com",
+      #android_artifact_type	:'APK',
+      android_artifact_path: "../build/app/outputs/apk/production/release/app-production-release.apk", ## ensurea add ../ to path to ignore rest of path from root
+      release_notes: "Lots of amazing new features to test out!",
+      firebase_cli_token:ENV["FB_CLI_TOKEN"] "1//09W6WFFiX9nURCgYIARAAGAkSNwF-L9IrduHAQ1Vf47FuqiG_9sRueUyHFDXah-ZYG4vhCB13iV6OTSrxUbbBA-Fo5A1Od7Czvhg",
+      )
   end
 
   desc "Submit a new Beta Build to Crashlytics Beta"

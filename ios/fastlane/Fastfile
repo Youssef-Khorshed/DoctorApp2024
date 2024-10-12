@@ -1,0 +1,35 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build and distribute the iOS app for testing"
+  lane :testIOS do
+    # sh "flutter clean"
+    
+    # # Build the iOS app
+    # sh "flutter build ios --release --no-codesign --flavor production -t lib/main_production.dart"
+    
+    # # Create the Payload directory
+    # sh "mkdir -p Payload"
+    
+    # # Copy the app bundle to the Payload directory
+    # sh "cp -R build/ios/iphoneos/Runner.app Payload/"
+    
+    # # Create the IPA file
+    # sh "zip -qq -r -9 YourAppName.ipa Payload"
+    
+    # # Clean up the Payload directory
+    # sh "rm -rf Payload"
+    
+    # # Move the IPA file to the desired location
+    # sh "mv YourAppName.ipa ../build/ios/iphoneos/"
+    
+    # Distribute the app using Firebase App Distribution
+    firebase_app_distribution(
+      app: "1:1061520891897:ios:af4225c8e1b75948c5e728",
+      testers: "khorshedkhorshed@gmail.com",
+      firebase_cli_token:"1//09W6WFFiX9nURCgYIARAAGAkSNwF-L9IrduHAQ1Vf47FuqiG_9sRueUyHFDXah-ZYG4vhCB13iV6OTSrxUbbBA-Fo5A1Od7Czvhg", 
+      ipa_path: "../ios/YourAppName.ipa",  # Corrected this line
+      release_notes: "Lots of amazing new features to iOS test out!"
+    )
+  end
+end
