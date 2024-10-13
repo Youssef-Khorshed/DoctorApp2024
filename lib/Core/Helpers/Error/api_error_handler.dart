@@ -161,7 +161,8 @@ ApiErrorModel _handleError(DioException error) {
       if (error.response != null &&
           error.response?.statusCode != null &&
           error.response?.statusMessage != null) {
-        return ApiErrorModel.fromJson(error.response!.data);
+        return DataSource.RECIEVE_TIMEOUT
+            .getFailure(); //ApiErrorModel.fromJson(error);
       } else {
         return DataSource.DEFAULT.getFailure();
       }

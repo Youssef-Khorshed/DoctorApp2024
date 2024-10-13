@@ -17,6 +17,11 @@ class TextStyles {
       color: ColorManager.primaryBlue,
       fontSize: 32.sp,
       fontWeight: FontWeightHelper.bold);
+  static TextStyle font18grayExtraDark = TextStyle(
+      color: ColorManager.grayExtraDark,
+      fontWeight: FontWeightHelper.regular,
+      fontSize: 11.sp);
+
   static TextStyle font11primaryBlue = TextStyle(
       color: ColorManager.primaryBlue,
       fontSize: 11.sp,

@@ -7,6 +7,8 @@ import 'package:flutter_complete_project/Features/Auth/Presentation/Logic/Regist
 import 'package:flutter_complete_project/Features/Auth/Presentation/UI/Login/LoginScreen.dart';
 import 'package:flutter_complete_project/Features/Auth/Onboadrding/onboarding.dart';
 import 'package:flutter_complete_project/Features/Auth/Presentation/UI/SignUp/signupScreen.dart';
+import 'package:flutter_complete_project/Features/Home/Presentation/Logic/bloc/home_bloc.dart';
+import 'package:flutter_complete_project/Features/Home/Presentation/UI/HomeScreen.dart';
 
 class AppRoutes {
   Route generateroute(RouteSettings settings) {
@@ -24,6 +26,12 @@ class AppRoutes {
             builder: (context) => BlocProvider(
                   create: (context) => getit<RegisterCubit>(),
                   child: const Signupscrenn(),
+                ));
+      case Routes.home:
+        return MaterialPageRoute(
+            builder: (context) => BlocProvider(
+                  create: (context) => getit<HomeBloc>(),
+                  child: const Homescreen(),
                 ));
       default:
         return MaterialPageRoute(

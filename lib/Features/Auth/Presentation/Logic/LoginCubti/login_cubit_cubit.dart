@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_project/Core/Helpers/dio_factory.dart';
 import 'package:flutter_complete_project/Features/Auth/Data/Model/loginModel.dart';
 import 'package:flutter_complete_project/Features/Auth/Data/RepoImplementation/repoimp.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -19,7 +20,10 @@ class LoginCubit extends Cubit<LoginCubitState> {
     emit(const LoginCubitState.loading());
     final result = await repoImp.login(Loginmodel(
         email: emailController.text, password: passwordController.text));
-    result.fold((l) => emit(const LoginCubitState.failure()),
-        (r) => emit(const LoginCubitState.success()));
+    result.fold((l) => emit(const LoginCubitState.failure()), (r) {
+      DioFactory.setTokenIntoHeaderAfterLogin(r.data!.token!);
+      // debugPrint(r.data!.token!);
+      emit(const LoginCubitState.success());
+    });
   }
 }
