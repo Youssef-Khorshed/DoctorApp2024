@@ -72,6 +72,8 @@ dependencies:
   # for getting country flags
   country_flags: ^1.0.0  # Check for the latest version
   country_list_pick: ^1.0.1+6
+  flutter_dotenv:
+  rxdart: ^0.27.0
 
 dev_dependencies:
   flutter_test:
@@ -99,6 +101,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
+    - .env
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

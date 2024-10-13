@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_complete_project/Core/Extensions/navigation.dart';
 import 'package:flutter_complete_project/Core/Helpers/spacing.dart';
+import 'package:flutter_complete_project/Core/Routing/routes.dart';
 import 'package:flutter_complete_project/Core/Strings/strings.dart';
 import 'package:flutter_complete_project/Core/Theme/Color/colors.dart';
 import 'package:flutter_complete_project/Core/Theme/Styles/textStyles.dart';
@@ -10,6 +12,7 @@ import 'package:flutter_complete_project/Core/Validation/customvalidation.dart';
 import 'package:flutter_complete_project/Core/Widgets/app_text_button.dart';
 import 'package:flutter_complete_project/Core/Widgets/app_text_form_field.dart';
 import 'package:flutter_complete_project/Features/Auth/Presentation/Logic/LoginCubti/login_cubit_cubit.dart';
+import 'package:flutter_complete_project/Features/Auth/Presentation/UI/Login/LoginLogic.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -122,13 +125,7 @@ class _LoginscreenBodyState extends State<LoginscreenBody> {
                   AppTextButton(
                     buttonText: 'Login',
                     onPressed: () async {
-                      if (context
-                          .read<LoginCubit>()
-                          .formKey
-                          .currentState!
-                          .validate()) {
-                        await context.read<LoginCubit>().emitLogin();
-                      }
+                      await loginlogic(context: context);
                     },
                     textStyle: TextStyles.font16BoldWhite,
                   ),

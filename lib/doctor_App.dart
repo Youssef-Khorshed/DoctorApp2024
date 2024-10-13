@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_project/Core/Helpers/sharedHelper.dart';
 import 'package:flutter_complete_project/Core/Routing/app_routes.dart';
 import 'package:flutter_complete_project/Core/Routing/routes.dart';
 import 'package:flutter_complete_project/Core/Theme/Color/colors.dart';
@@ -25,7 +26,10 @@ class DoctorApp extends StatelessWidget {
             scaffoldBackgroundColor: ColorManager.whiteBackground,
           ),
           onGenerateRoute: appRoutes.generateroute,
-          initialRoute: Routes.register,
+          initialRoute:
+              SharedPrefHelper.getSecuredString('ACCESS_TOKEN') == null
+                  ? Routes.login
+                  : Routes.home,
         );
       },
     );
